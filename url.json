@@ -1,0 +1,19 @@
+{
+    "urls": [
+        {
+            "sno": "1",
+             "branch_name": "SHLOKA THE SCHOOL",
+            "url": "https://shloka.wisibles.com/",
+            "crated_at": "16-07-2024"
+            
+        },
+        {
+            "sno": "2",
+            "branch_name": "Lotus Lapp",
+            "url": "https://lotuslap.wisibles.com/",
+            "crated_at": "16-07-2024"
+            
+        }
+        
+    ]
+}

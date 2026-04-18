@@ -1,0 +1,148 @@
+<div class="content-wrapper" style="min-height: 348px;">    
+    <section class="content">
+        <div class="row">
+        
+            <?php $this->load->view('setting/_settingmenu'); ?>
+            
+            <!-- left column -->
+            <div class="col-md-8">
+                <!-- general form elements -->
+
+                <div class="box box-primary">
+                    <div class="box-header ptbnull">
+                        <h3 class="box-title titlefix"><i class="fa fa-gear"></i> <?php echo $this->lang->line('mobile_app'); ?></h3>
+                        <div class="box-tools pull-right">
+                        </div><!-- /.box-tools -->
+                    </div><!-- /.box-header -->
+                    <div class="">
+                        <form role="form" id="mobileapp_form" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="sch_id" value="<?php echo $result->id; ?>">
+                            <div class="box-body">                       
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="relative">   
+
+                                            <h4 class="session-head"><?php echo $this->lang->line('user_mobile_app'); ?></h4>
+
+                                                                  
+                                          
+                                        </div>
+                                    </div><!--./col-md-12-->
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4"> <?php echo $this->lang->line('user_mobile_app_api_url') ?></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="mobile_api_url" id="mobile_api_url" class="form-control" value="<?php echo $result->mobile_api_url; ?>">
+                                                <span class="text-danger"><?php echo form_error('mobile_api_url'); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4"> <?php echo $this->lang->line('user_mobile_app_primary_color_code') ?></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="app_primary_color_code" id="app_primary_color_code" class="form-control" value="<?php echo $result->app_primary_color_code; ?>">
+                                                <span class="text-danger"><?php echo form_error('app_primary_color_code'); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4"> <?php echo $this->lang->line('user_mobile_app_secondary_color_code'); ?></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="app_secondary_color_code" id="app_secondary_color_code" class="form-control" value="<?php echo $result->app_secondary_color_code; ?>">
+                                                <span class="text-danger"><?php echo form_error('app_secondary_color_code'); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--./row-->
+                                <div class="row hidden">
+                                    <div class="col-md-12">
+                                        <div class="settinghr"></div>
+                                        <div class="relative">   
+                                            <h4 class="session-head"><?php echo $this->lang->line('admin_mobile_app'); ?> </h4>
+                                        </div>
+                                    </div><!--./col-md-12-->
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4"> <?php echo $this->lang->line('admin_mobile_app_api_url') ?></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="admin_mobile_api_url" id="admin_mobile_api_url" class="form-control" value="<?php echo $result->admin_mobile_api_url; ?>">
+                                                <span class="text-danger"><?php echo form_error('admin_mobile_api_url'); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4"> <?php echo $this->lang->line('admin_mobile_app_primary_color_code') ?></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="admin_app_primary_color_code" id="admin_app_primary_color_code" class="form-control" value="<?php echo $result->admin_app_primary_color_code; ?>">
+                                                <span class="text-danger"><?php echo form_error('admin_app_primary_color_code'); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <label class="col-sm-4"> <?php echo $this->lang->line('admin_mobile_app_secondary_color_code'); ?></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="admin_app_secondary_color_code" id="admin_app_secondary_color_code" class="form-control" value="<?php echo $result->admin_app_secondary_color_code; ?>">
+                                                <span class="text-danger"><?php echo form_error('admin_app_secondary_color_code'); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--./row-->
+                            </div><!-- /.box-body -->
+                            <div class="box-footer">
+                                <?php
+                                if ($this->rbac->hasPrivilege('general_setting', 'can_edit')) {
+                                    ?>
+                                    <button type="button" class="btn btn-primary submit_schsetting pull-right edit_mobileapp" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> <?php echo $this->lang->line('processing'); ?>"> <?php echo $this->lang->line('save'); ?></button>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </form>
+                    </div><!-- /.box-body -->
+                </div>
+            </div><!--/.col (left) -->
+            <!-- right column -->
+        </div>
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
+
+<!-- new END -->
+
+</div><!-- /.content-wrapper -->
+
+
+
+<script type="text/javascript">
+    var base_url = '<?php echo base_url(); ?>';
+ 
+    $(".edit_mobileapp").on('click', function (e) {
+        var $this = $(this);
+        $this.button('loading');
+        $.ajax({
+            url: '<?php echo site_url("schsettings/savemobileapp") ?>',
+            type: 'POST',
+            data: $('#mobileapp_form').serialize(),
+            dataType: 'json',
+
+            success: function (data) {
+
+                if (data.status == "fail") {
+                    var message = "";
+                    $.each(data.error, function (index, value) {
+
+                        message += value;
+                    });
+                    errorMsg(message);
+                } else {
+                    successMsg(data.message);
+                }
+
+                $this.button('reset');
+            }
+        });
+    });
+</script>
